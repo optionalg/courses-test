@@ -25,3 +25,30 @@ Give the correct answer. There's no hint!
 test_mc(2)
 ```
 
+--- type:NormalExercise
+## Normal Exercise
+
+asdf
+
+*** =instructions
+- asdf
+
+*** =pre_exercise_code
+```{r}
+
+```
+
+*** =sample_code
+```{r}
+x <- 234
+```
+
+*** =solution
+```{r}
+x <- 234
+```
+
+*** =sct
+```{r}
+success_msg('test')
+```
