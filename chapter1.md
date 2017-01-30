@@ -25,7 +25,7 @@ Give the correct answer. There's no hint!
 test_mc(2)
 ```
 
---- type:NormalExercise key:b9377ebc82
+--- type:NormalExercise xp:100 key:b9377ebc82
 ## Normal Exercise
 
 asdf
