@@ -2,7 +2,7 @@
 title       : Testing PlainMultipleChoiceExercise
 description : Testing PlainMultipleChoiceExercise
 
---- type:PlainMultipleChoiceExercise xp:50
+--- type:PlainMultipleChoiceExercise xp:50 key:916f4a9641
 ## Plain Multiple Choice Exercise
 
 Who was one of the creaters of R?
