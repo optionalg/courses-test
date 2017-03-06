@@ -13,7 +13,6 @@ Who was one of the creaters of R?
 - Donald Knuth
 - Ross Ihaka
 
-
 *** =sct
 ```{r}
 test_mc(2)
