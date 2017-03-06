@@ -1,54 +1,20 @@
 ---
-title       : Insert the chapter title here
-description : Insert the chapter description here
-attachments :
-  slides_link : https://s3.amazonaws.com/assets.datacamp.com/course/teach/slides_example.pdf
+title       : Testing PlainMultipleChoiceExercise
+description : Testing PlainMultipleChoiceExercise
 
---- type:MultipleChoiceExercise lang:r xp:50 skills:1 key:a540eafd9e
-## A really bad movie
+--- type:PlainMultipleChoiceExercise xp:50
+## Plain Multiple Choice Exercise
 
-Give the correct answer. There's no hint!
+Who was one of the creaters of R?
 
 *** =instructions
-- Adventure
-- Action
-- Animation
-- Comedy
+- Ronald McDonald
+- Ronald Reagan
+- Donald Knuth
+- Ross Ihaka
 
-*** =pre_exercise_code
-```{r}
-
-```
 
 *** =sct
 ```{r}
 test_mc(2)
-```
-
---- type:NormalExercise xp:100 key:b9377ebc82
-## Normal Exercise
-
-asdf
-
-*** =instructions
-- asdf
-
-*** =pre_exercise_code
-```{r}
-
-```
-
-*** =sample_code
-```{r}
-x <- 234
-```
-
-*** =solution
-```{r}
-x <- 234
-```
-
-*** =sct
-```{r}
-success_msg('test')
 ```
