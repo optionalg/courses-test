@@ -57,9 +57,60 @@ library(ggplot2)
 ggplot(data = bechdel,
   mapping = aes(x = five_year, fill = binary)) +
   geom_bar(position = "fill", color = "white")
+
+  library(fivethirtyeight)
+  library(ggplot2)
+  ggplot(data = bechdel) +
+    geom_bar(position = "fill", color = "white",
+      mapping = aes(x = five_year, fill = binary))
 ```
 
 *** =sct
 ```{r}
+test_library_function("fivethirtyeight")
+test_library_function("ggplot2")
+test_or({
+  # match original solution
+  ggplot_fun <- ex() %>% check_function("ggplot")
+  ggplot_fun %>% check_arg("data") %>% check_equal(eval = FALSE)
+  ggplot_fun %>% check_arg("mapping")
+  aes_fun <- ex() %>% check_function("aes")
+  aes_fun %>% check_arg("x") %>% check_equal(eval = FALSE)
+  aes_fun %>% check_arg("fill") %>% check_equal(eval = FALSE)
+  geom_bar_fun <- ex() %>% check_function("geom_bar")
+  geom_bar_fun %>% check_arg("position") %>% check_equal()
+  geom_bar_fun %>% check_arg("color") %>% check_equal()
+}, {
+  # match solution 1:
+  # ggplot(data = bechdel, mapping = aes(x = five_year)) +
+  #   geom_bar(position = "fill", color = "white",
+  #            mapping = aes(fill = binary))
+  ggplot_fun <- ex() %>% check_function("ggplot")
+  ggplot_fun %>% check_arg("data") %>% check_equal(eval = FALSE)
+  ggplot_fun %>% check_arg("mapping")
+  aes_fun <- ex() %>% check_function("aes")
+  aes_fun %>% check_arg("x") %>% check_equal(eval = FALSE)
+  geom_bar_fun <- ex() %>% check_function("geom_bar")
+  geom_bar_fun %>% check_arg("position") %>% check_equal()
+  geom_bar_fun %>% check_arg("color") %>% check_equal()
+  geom_bar_fun %>% check_arg("mapping")
+  ex() %>% check_function("aes", index = 2) %>% check_arg("fill") %>% check_equal(eval = FALSE)
+}, {
+  # Match solution 2:
+  # ggplot(data = bechdel) +
+  #   geom_bar(position = "fill", color = "white",
+  #            mapping = aes(x = five_year, fill = binary))
+  ex() %>% check_function("ggplot") %>% check_arg("data") %>% check_equal(eval = FALSE)
+  geom_bar_fun <- ex() %>% check_function("geom_bar")
+  geom_bar_fun %>% check_arg("position") %>% check_equal()
+  geom_bar_fun %>% check_arg("color") %>% check_equal()
+  geom_bar_fun %>% check_arg("mapping")
+  aes_fun <- ex() %>% check_function("aes")
+  aes_fun %>% check_arg("x") %>% check_equal(eval = FALSE)
+  aes_fun %>% check_arg("fill") %>% check_equal(eval = FALSE)
+}, {
+  # Match solution 3:
+  # similarly
+})
 success_msg("You are awesome!")
 ```
