@@ -18,7 +18,7 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 test_mc(2)
 ```
 
---- type:NormalExercise xp:100
+--- type:NormalExercise xp:100 key:6224dcc129
 ## Ggplot Exercise
 
 For Chester
