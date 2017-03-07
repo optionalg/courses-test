@@ -61,4 +61,5 @@ ggplot(data = bechdel,
 
 *** =sct
 ```{r}
+success_msg("You are awesome!")
 ```
