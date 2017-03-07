@@ -57,12 +57,6 @@ library(ggplot2)
 ggplot(data = bechdel,
   mapping = aes(x = five_year, fill = binary)) +
   geom_bar(position = "fill", color = "white")
-
-  library(fivethirtyeight)
-  library(ggplot2)
-  ggplot(data = bechdel) +
-    geom_bar(position = "fill", color = "white",
-      mapping = aes(x = five_year, fill = binary))
 ```
 
 *** =sct
@@ -82,35 +76,34 @@ test_or({
   geom_bar_fun %>% check_arg("color") %>% check_equal()
 }, {
   # match solution 1:
-  # ggplot(data = bechdel, mapping = aes(x = five_year)) +
-  #   geom_bar(position = "fill", color = "white",
-  #            mapping = aes(fill = binary))
-  ggplot_fun <- ex() %>% check_function("ggplot")
+  sol_code1 <- 'ggplot(data = bechdel, mapping = aes(x = five_year)) + geom_bar(position = "fill", color = "white", mapping = aes(fill = binary))'
+  alt_ex_1 <- ex() %>% override_solution(sol_code1)
+
+  ggplot_fun <- alt_ex_1 %>% check_function("ggplot")
   ggplot_fun %>% check_arg("data") %>% check_equal(eval = FALSE)
   ggplot_fun %>% check_arg("mapping")
-  aes_fun <- ex() %>% check_function("aes")
+  aes_fun <- alt_ex_1 %>% check_function("aes")
   aes_fun %>% check_arg("x") %>% check_equal(eval = FALSE)
-  geom_bar_fun <- ex() %>% check_function("geom_bar")
+  geom_bar_fun <- alt_ex_1 %>% check_function("geom_bar")
   geom_bar_fun %>% check_arg("position") %>% check_equal()
   geom_bar_fun %>% check_arg("color") %>% check_equal()
   geom_bar_fun %>% check_arg("mapping")
-  ex() %>% check_function("aes", index = 2) %>% check_arg("fill") %>% check_equal(eval = FALSE)
+  alt_ex_1 %>% check_function("aes", index = 2) %>% check_arg("fill") %>% check_equal(eval = FALSE)
 }, {
   # Match solution 2:
-  # ggplot(data = bechdel) +
-  #   geom_bar(position = "fill", color = "white",
-  #            mapping = aes(x = five_year, fill = binary))
-  ex() %>% check_function("ggplot") %>% check_arg("data") %>% check_equal(eval = FALSE)
-  geom_bar_fun <- ex() %>% check_function("geom_bar")
+  sol_code2 <- 'ggplot(data = bechdel) + geom_bar(position = "fill", color = "white", mapping = aes(x = five_year, fill = binary))'
+  alt_ex_2 <- ex() %>% override_solution(sol_code2)
+  
+  alt_ex_2 %>% check_function("ggplot") %>% check_arg("data") %>% check_equal(eval = FALSE)
+  geom_bar_fun <- alt_ex_2 %>% check_function("geom_bar")
   geom_bar_fun %>% check_arg("position") %>% check_equal()
   geom_bar_fun %>% check_arg("color") %>% check_equal()
   geom_bar_fun %>% check_arg("mapping")
-  aes_fun <- ex() %>% check_function("aes")
+  aes_fun <- alt_ex_2 %>% check_function("aes")
   aes_fun %>% check_arg("x") %>% check_equal(eval = FALSE)
   aes_fun %>% check_arg("fill") %>% check_equal(eval = FALSE)
-}, {
-  # Match solution 3:
-  # similarly
 })
+# Match solution 3: todo!
+
 success_msg("You are awesome!")
 ```
