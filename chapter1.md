@@ -16,4 +16,5 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 *** =sct
 ```{r}
 test_mc(2)
+success_msg("Amazing <pre><code>x <- 123</code></pre>.")
 ```
