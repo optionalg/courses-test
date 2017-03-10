@@ -19,7 +19,7 @@ test_mc(2)
 success_msg("Amazing <pre><code>x <- 123</code></pre>.")
 ```
 
---- type:MultipleChoiceExercise xp:50
+--- type:MultipleChoiceExercise xp:50 key:9c70cd42e7
 ## Experimentation
 
 testtest
