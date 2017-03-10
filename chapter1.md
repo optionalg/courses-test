@@ -18,3 +18,18 @@ Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor i
 test_mc(2)
 success_msg("Amazing <pre><code>x <- 123</code></pre>.")
 ```
+
+--- type:MultipleChoiceExercise xp:50
+## Experimentation
+
+testtest
+
+*** =instructions
+- A
+- B
+- C
+
+*** =sct
+```{r}
+test_mc(2)
+```
