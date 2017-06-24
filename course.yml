@@ -5,4 +5,4 @@ description      : Test Course
 university       : DataCamp
 difficulty_level : 2
 time_needed      : 1 hour
-from             : 'r-base-prod:19'
+from             : 'r-base-prod:27'
