@@ -70,6 +70,7 @@ As this is the first time you are combining multiple dplyr concepts, we have bro
 *** =pre_exercise_code
 ```{r}
 library(dplyr)
+library(hflights)
 ```
 
 *** =sample_code
