@@ -1,7 +1,6 @@
 ---
-title       : Testing Chapter
+title       : The first chapter
 description : Chapter to test new features on DataCamp
-
 
 --- type:BulletExercise lang:r xp:150 key:79e232200d
 ## Building a plot!
@@ -74,7 +73,7 @@ As this is the first time you are combining multiple dplyr concepts, we have bro
 hflights %>%
 ```
 
-*** =type1:NormalExercise 
+*** =type1:NormalExercise
 *** =key1: 421e55e2ec
 
 *** =xp1: 30
@@ -84,7 +83,7 @@ Compute for every carrier, the aggregate number of visits to each destination.
 
 *** =solution1
 ```{r}
-hflights %>% 
+hflights %>%
   group_by(UniqueCarrier, Dest) %>%
   summarise(n = n())
 ```
@@ -94,7 +93,7 @@ hflights %>%
 # no sct yet
 ```
 
-*** =type2:NormalExercise 
+*** =type2:NormalExercise
 *** =key2: 6eb56c5f40
 
 *** =xp2: 30
@@ -104,7 +103,7 @@ Rank the aggregate number of visits for every carrier.
 
 *** =solution2
 ```{r}
-hflights %>% 
+hflights %>%
   group_by(UniqueCarrier, Dest) %>%
   summarise(n = n()) %>%
   mutate(rank = rank(desc(n)))
@@ -115,7 +114,7 @@ hflights %>%
 # no sct yet
 ```
 
-*** =type3:NormalExercise 
+*** =type3:NormalExercise
 *** =key3: be3d94b96c
 
 *** =xp3: 30
@@ -127,7 +126,7 @@ Filter the results to only return the top ranked destination for every carrier.
 *** =solution3
 
 ```{r}
-hflights %>% 
+hflights %>%
   group_by(UniqueCarrier, Dest) %>%
   summarise(n = n()) %>%
   mutate(rank = rank(desc(n))) %>%
@@ -150,8 +149,8 @@ For this exercise, we have already created a new data table named `DT` with keys
 ```r
 # The 'keyed' data.table DT
 DT <- data.table(
-  A = letters[c(2, 1, 2, 3, 1, 2, 3)], 
-  B = c(5, 4, 1, 9, 8, 8, 6), 
+  A = letters[c(2, 1, 2, 3, 1, 2, 3)],
+  B = c(5, 4, 1, 9, 8, 8, 6),
   C = 6:12
 )
 setkey(DT, A, B)
@@ -160,8 +159,8 @@ setkey(DT, A, B)
 *** =pre_exercise_code
 ```{r}
 DT <- data.table(
-  A = letters[c(2, 1, 2, 3, 1, 2, 3)], 
-  B = c(5, 4, 1, 9, 8, 8, 6), 
+  A = letters[c(2, 1, 2, 3, 1, 2, 3)],
+  B = c(5, 4, 1, 9, 8, 8, 6),
   C = 6:12
 )
 setkey(DT, A, B)
@@ -174,7 +173,7 @@ setkey(DT, A, B)
 ```
 
 
-*** =type1:NormalExercise 
+*** =type1:NormalExercise
 *** =xp1: 30
 
 *** =instructions1
@@ -192,7 +191,7 @@ DT["b"]
 # no sct yet
 ```
 
-*** =type2:NormalExercise 
+*** =type2:NormalExercise
 *** =xp2: 30
 
 *** =instructions2
@@ -209,7 +208,7 @@ DT[c("b", "c")]
 # no sct yet
 ```
 
-*** =type3:NormalExercise 
+*** =type3:NormalExercise
 *** =xp3: 30
 
 *** =instructions3
@@ -226,11 +225,11 @@ DT[c("b", "c"), mult = "first"]
 # no sct yet
 ```
 
-*** =type4:NormalExercise 
+*** =type4:NormalExercise
 *** =xp4: 30
 
 *** =instructions4
-Select the first and last row of the "b" and "c" groups. You will need to use `by = .EACHI` and `.SD` 
+Select the first and last row of the "b" and "c" groups. You will need to use `by = .EACHI` and `.SD`
 
 *** =solution4
 
@@ -244,7 +243,7 @@ DT[c("b", "c"), .SD[c(1, .N)], by = .EACHI]
 # no sct yet
 ```
 
-*** =type5:NormalExercise 
+*** =type5:NormalExercise
 *** =xp5: 30
 
 *** =instructions5
