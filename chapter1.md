@@ -174,6 +174,8 @@ setkey(DT, A, B)
 
 
 *** =type1:NormalExercise
+*** =key1: 5974659a43
+
 *** =xp1: 30
 
 *** =instructions1
@@ -192,6 +194,8 @@ DT["b"]
 ```
 
 *** =type2:NormalExercise
+*** =key2: cf4ca03986
+
 *** =xp2: 30
 
 *** =instructions2
@@ -209,6 +213,8 @@ DT[c("b", "c")]
 ```
 
 *** =type3:NormalExercise
+*** =key3: e1b2784d0e
+
 *** =xp3: 30
 
 *** =instructions3
@@ -226,6 +232,8 @@ DT[c("b", "c"), mult = "first"]
 ```
 
 *** =type4:NormalExercise
+*** =key4: 0493afe637
+
 *** =xp4: 30
 
 *** =instructions4
@@ -244,6 +252,8 @@ DT[c("b", "c"), .SD[c(1, .N)], by = .EACHI]
 ```
 
 *** =type5:NormalExercise
+*** =key5: 1942879c17
+
 *** =xp5: 30
 
 *** =instructions5
