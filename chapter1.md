@@ -5,6 +5,8 @@ description : Chapter to test new features on DataCamp
 --- type:BulletExercise lang:r xp:150 key:79e232200d
 ## ggplot2 example
 
+This is the assignment.
+
 *** =pre_exercise_code
 ```{r}
 library(ggplot2)
