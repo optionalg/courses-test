@@ -67,10 +67,14 @@ Let us suppose we want to find the most visited destination for each carrier. Be
 
 As this is the first time you are combining multiple dplyr concepts, we have broken this exercise down into smaller steps. Each step will allow you to focus on a specific concept.
 
-*** =sample_code
-
+*** =pre_exercise_code
 ```{r}
-hflights %>%
+library(dplyr)
+```
+
+*** =sample_code
+```{r}
+hflights %>% ___
 ```
 
 *** =type1:NormalExercise
@@ -139,7 +143,6 @@ hflights %>%
 ```
 
 --- type:BulletExercise lang:r key:5189de74d5
-
 ## Selecting groups or parts of groups
 
 The previous exercise illustrated how you can manually set a key via `setkey(DT, A, B)`. `setkey()` sorts the data by the columns that you specify and changes the table by reference. Having set a key will allow you to use it, for example, as a super-charged row name when doing selections. Arguments like `mult` and `nomatch` then help you to select only particular parts of groups.
@@ -158,6 +161,7 @@ setkey(DT, A, B)
 
 *** =pre_exercise_code
 ```{r}
+library(data.table)
 DT <- data.table(
   A = letters[c(2, 1, 2, 3, 1, 2, 3)],
   B = c(5, 4, 1, 9, 8, 8, 6),
@@ -167,11 +171,9 @@ setkey(DT, A, B)
 ```
 
 *** =sample_code
-
 ```{r}
 # enter your code here
 ```
-
 
 *** =type1:NormalExercise
 *** =xp1: 30
