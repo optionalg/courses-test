@@ -7,6 +7,7 @@ description : Chapter to test new features on DataCamp
 
 This is a Pure multiple choice exercise.
 
+*** =question
 What is the correct answer? It's B
 
 *** =possible_answers
