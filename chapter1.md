@@ -2,6 +2,25 @@
 title       : The first chapter
 description : Chapter to test new features on DataCamp
 
+--- type:PureMultipleChoiceExercise
+## Example of PureMultipleChoiceExercise
+
+This is a Pure multiple choice exercise.
+
+What is the correct answer? It's B
+
+*** =possible_answers
+- A
+- [B (correct one)]
+- C
+- D
+
+*** =feedbacks
+- A is not correct
+- B is correct!
+- C is not correct
+- D is not correct
+
 --- type:BulletExercise lang:r xp:150 key:79e232200d
 ## ggplot2 example
 
