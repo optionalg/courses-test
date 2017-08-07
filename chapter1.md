@@ -2,12 +2,11 @@
 title       : The first chapter
 description : Chapter to test new features on DataCamp
 
---- type:PureMultipleChoiceExercise key:d4ae489740
+--- type:PureMultipleChoiceExercise
 ## Example of PureMultipleChoiceExercise
 
 This is a Pure multiple choice exercise.
 
-*** =question
 What is the correct answer? It's B
 
 *** =possible_answers
