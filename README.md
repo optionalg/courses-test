@@ -1,7 +1,7 @@
-# DataCamp Test Course
+# Test Course
 
-This course builds on all three environments, so watch out:
+This course is currently only linked to production:
 
-- https://dev.datacamp.com/teach
-- https://staging.datacamp.com/teach
-- https://www.datacamp.com/teach
+- production
+  + https://www.datacamp.com/teach/repositories/1317/branches/master
+  + https://www.datacamp.com/courses/4657
